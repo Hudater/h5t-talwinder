@@ -4,11 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="css-reset.css"> -->
   <title>ChaiTailwind Demo</title>
 </head>
 
 <body>
-  <button onclick="toggleTalwinder()">Toggle H5t-Talwinder</button>
+  <div
+    style="position: fixed; border: none; top: 16px; right: 16px; z-index: 9999; background-color: #1e1e2e; padding: 12px 20px; border-radius: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+    <button onclick="toggleTalwinder()"
+      style="background-color: #e991aa; color: #1e1e2e; border: none; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: monospace; letter-spacing: 0.5px;">
+      Toggle H5t-Talwinder
+    </button>
+
+    <p style="color: #cdd6f4; line-height: 1; white-space: nowrap; font-size: 13px; font-family: monospace; margin: 0;">
+      Status: <span id="h5t-talvinder-status" style="display: inline-block;white-space: nowrap; width: 70px; color: #c6fabe; font-weight: 700;"></span>
+    </p>
+  </div>
   <!-- ===================== TYPOGRAPHY ===================== -->
   <div class="chai-p-8">
 
