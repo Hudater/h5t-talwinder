@@ -10,6 +10,17 @@ function toggleTalwinder() {
     }
 }
 
+function removeStyles() {
+    // Remove h5t-talwinder style
+    const stylesheet = document.querySelector('link[href*="css-reset.css"]');
+    if (stylesheet) {
+        stylesheet.remove();
+    }
+    document.getElementById("h5t-talvinder-status").textContent = "Inactive"
+    // document.querySelector('link[href*="css-reset.css"]').remove()
+    console.log("Darling Darling dil kyu toda! \nOn karo, On karo h5t style thoda")
+}
+
 function applyStyles() {
 
     // load reset stylesheet
@@ -20,20 +31,8 @@ function applyStyles() {
     link.href = 'css-reset.css';
     head.appendChild(link);
     document.getElementById("h5t-talvinder-status").textContent = "Active"
-    console.log("ON")
+    console.log("User Sahab, styles to badi acchi paal rakhi hain aapne")
 }
 
-function removeStyles() {
-    const stylesheet = document.querySelector('link[href*="css-reset.css"]');
-
-    // Check if the element exists before attempting removal
-    if (stylesheet) {
-        stylesheet.remove();
-    }
-    document.getElementById("h5t-talvinder-status").textContent = "Inactive"
-    // document.querySelector('link[href*="css-reset.css"]').remove()
-    console.log("OFF")
-    // alert("!");
-}
 
 applyStyles();
