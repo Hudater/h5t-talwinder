@@ -121,7 +121,7 @@ function applyTalwinderStyles() {
         'justify-end': () => ({ 'justify-content': 'flex-end' }),
         'justify-start': () => ({ 'justify-content': 'flex-start' }),
         'gap': (parts) => ({ 'gap': `${parts[1] * 4}px` }),
-        'grid-cols': (parts) => ({ 'grid-template-columns': `repeat(${parts[1]}, 1fr)` }),
+        'grid-cols': (parts) => ({ 'grid-template-columns': `repeat(${parts[2]}, 1fr)` }),
 
         // Width
         'w-full': () => ({ 'width': '100%' }),
@@ -191,8 +191,8 @@ function applyTalwinderStyles() {
             let styles;
             if (chaiConfig[raw]) {
                 styles = chaiConfig[raw](parts);
-            } else if (raw.startsWith('grid-cols')) {
-                styles = chaiConfig['grid-cols'](['grid-cols', raw.split('-')[2]]);
+            } else if (chaiConfig[parts[0] + "-" + parts[1]]) {
+                styles = chaiConfig[parts[0] + "-" + parts[1]](parts);
             } else if (chaiConfig[parts[0]]) {
                 styles = chaiConfig[parts[0]](parts);
             }
