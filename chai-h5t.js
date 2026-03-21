@@ -172,24 +172,30 @@ function applyTalwinderStyles() {
             'margin': `${parts[1] * 4}px`,
         }),
     };
+    let allElements = document.querySelectorAll('*');
+    for (let i = 0; i < allElements.length; i++) {
+        const el = allElements[i];
+        const classes = el.className.toString().toLowerCase().split(/\s+/);
+        for (let j = 0; j < classes.length; j++) {
+            const cls = classes[j];
+            if (!cls.startsWith("chai-")) continue;
+            const raw = cls.replace("chai-", "");
+            const parts = raw.split("-");
 
-    // Get all classes and filter by 'chai-'
-    var allClasses = [];
-    var allElements = document.querySelectorAll('*');
-    for (var i = 0; i < allElements.length; i++) {
-        var classes = allElements[i].className.toString().toLowerCase().split(/\s+/);
-        for (var j = 0; j < classes.length; j++) {
-            var cls = classes[j];
-            if (cls && allClasses.indexOf(cls) === -1 && cls.includes("chai-"))
-                allClasses.push(cls);
+            let styles;
+            if (chaiConfig[raw]) {
+                styles = chaiConfig[raw](parts);
+            } else if (chaiConfig[parts[0]]) {
+                styles = chaiConfig[parts[0]](parts);
+            }
+
+            if (styles) {
+                Object.assign(el.style, styles);
+                el.classList.remove(cls);
+            }
         }
     }
-    // console.log(allClasses);
-
-    // 
-
-
-    console.log("User Sahab, styles to badi acchi laga rakhi hain aapne")
+    console.log("User Sahab, styles to badi acchi laga rakhi hain aapne \nThe colors are really bright")
 }
 
 
