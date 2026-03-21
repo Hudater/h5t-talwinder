@@ -191,6 +191,8 @@ function applyTalwinderStyles() {
             let styles;
             if (chaiConfig[raw]) {
                 styles = chaiConfig[raw](parts);
+            } else if (raw.startsWith('grid-cols')) {
+                styles = chaiConfig['grid-cols'](['grid-cols', raw.split('-')[2]]);
             } else if (chaiConfig[parts[0]]) {
                 styles = chaiConfig[parts[0]](parts);
             }
