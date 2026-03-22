@@ -4,6 +4,8 @@ H5t-Talwinder is a lightweight utility-first CSS engine written in vanilla JavaS
 
 Live demo: <https://talwinder.hudater.dev>
 
+![Main Function Flow](./applyTalwinder_Flow.svg)
+
 ## What this repo contains
 
 ### Engine
