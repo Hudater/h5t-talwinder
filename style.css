@@ -152,6 +152,58 @@ body::before {
     animation: fadeUp 0.8s ease forwards 0.8s;
 }
 
+.hero-usage {
+    font-family: var(--font-mono);
+    color: var(--chai-brown);
+    background: rgba(139, 69, 19, 0.08);
+    border: 1px dashed rgba(139, 69, 19, 0.3);
+    border-radius: 8px;
+    padding: 12px 20px;
+    max-width: 760px;
+    margin: 0 auto 16px;
+
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.65s;
+    text-align: left;
+}
+
+.hero-usage-label {
+    margin: 0 0 6px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    /* make the Usage title left-aligned and black-ish */
+    text-align: left;
+    color: var(--chai-dark);
+}
+
+/* optional but keeps the label visually consistent inside the box */
+.hero-usage {
+    font-family: var(--font-mono);
+    color: var(--chai-brown);
+    background: rgba(139, 69, 19, 0.08);
+    border: 1px dashed rgba(139, 69, 19, 0.3);
+    border-radius: 8px;
+    padding: 12px 20px;
+    max-width: 760px;
+    margin: 0 auto 16px;
+
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.65s;
+    text-align: left;
+}
+
+.hero-usage-code {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+
+    white-space: normal;
+    word-break: break-word;
+}
+
 /* Demo section wrapper */
 .demo-section {
     max-width: 1000px;

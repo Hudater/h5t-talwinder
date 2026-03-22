@@ -33,6 +33,14 @@ Live demo: <https://talwinder.hudater.dev>
 
 ### 1. Include the engine
 
+CDN:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/Hudater/h5t-talwinder@main/chai-h5t.js"></script>
+```
+
+Local:
+
 ```html
 <link rel="stylesheet" href="css-reset.css" />
 <script src="chai-h5t.js"></script>
